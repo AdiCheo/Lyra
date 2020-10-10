@@ -10,7 +10,7 @@ const beeper = require('beeper');
 const fs = require('fs');
 
 // postcss plugins
-const autoprefixer = require('autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 const colorFunction = require('postcss-color-function');
 const cssnano = require('cssnano');
 const customProperties = require('postcss-custom-properties');
