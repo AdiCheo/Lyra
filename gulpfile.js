@@ -10,7 +10,7 @@ const beeper = require('beeper');
 const fs = require('fs');
 
 // postcss plugins
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const colorFunction = require('postcss-color-function');
 const cssnano = require('cssnano');
 const customProperties = require('postcss-custom-properties');
@@ -72,7 +72,8 @@ function zipper(done) {
         src([
             '**',
             '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
+            '!dist', '!dist/**',
+            '!src', '!src/**'
         ]),
         zip(filename),
         dest(targetDir)
