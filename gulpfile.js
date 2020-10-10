@@ -72,7 +72,8 @@ function zipper(done) {
         src([
             '**',
             '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
+            '!src', '!src/**',
+	    '!dist', '!dist/**'
         ]),
         zip(filename),
         dest(targetDir)
