@@ -2,6 +2,9 @@ routes:
   /signup/: members/signup
   /signin/: members/signin
   /account/: members/account
+  /:
+    data: page.home
+    template: home
 
 collections:
   /:
