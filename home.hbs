@@ -10,12 +10,13 @@ into the {body} of the default.hbs template --}}
                 <h1 class="site-title">
                     {{#if @site.logo}}
                         <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                        {{@site.title}}
                     {{else}}
                         {{@site.title}}
                     {{/if}}
-                </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
-                {{#if @member}}
+                    </h1>
+                    <h2 class="site-description">{{@site.description}}</h2>
+                    {{#if @member}}
                     <div class="account-menu">
                         <a href="javascript:" class="account-menu-avatar" id="account-menu" type="checkbox" name="menu">
                             {{> "icons/avatar"}}
