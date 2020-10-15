@@ -10,34 +10,14 @@ into the {body} of the default.hbs template --}}
                 <h1 class="site-title">
                     {{#if @site.logo}}
                         <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                        {{@site.title}}
                     {{else}}
                         {{@site.title}}
                     {{/if}}
                     </h1>
                     <h2 class="site-description">{{@site.description}}</h2>
-                    {{#if @member}}
-                    <div class="account-menu">
-                        <a href="javascript:" class="account-menu-avatar" id="account-menu" type="checkbox" name="menu">
-                            {{> "icons/avatar"}}
-                            {{#if @member.avatar_image}}
-                                <img src="{{@member.avatar_image}}" />
-                            {{/if}}
-                        </a>
-                        <ul class="account-menu-dropdown">
-                            <li class="account-info">
-                                <small>Signed in as</small>
-                                <span class="account-email" title="{{@member.email}}">{{@member.email}}</span>
-                            </li>
-                            <li><a href="{{@site.url}}/account/">Account</a></li>
-                            <li><a href="#signout" data-members-signout>Log out</a></li>
-                        </ul>
-                    </div>
-                {{else}}
-                    <a class="signin-link" href="{{@site.url}}/signin/">Get Access Free</a>
-                {{/if}}
+                    <a class="signin-link" href="{{@site.url}}/signin/">Login</a>
             </div>
-        </div>
+        </div>  
     </div>
 </header>
 
@@ -46,7 +26,7 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
 
         <div class="post-feed">
-            {{#if @member.paid}}
+          {#if @member.paid}
                     {{#foreach posts visibility="all"}}
                     {{> "post-card"}}
                     {{/foreach}}
